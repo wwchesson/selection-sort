@@ -1,5 +1,16 @@
+
 def selection_sort(arr)
-  # type your code in here
+  sorted_array = []
+
+  arr.length.times do
+    min_value = arr.min
+    index = arr.index(min_value) 
+    # #index finds the index of the FIRST value given
+    sorted_array << min_value
+    arr.delete_at(index)
+  end
+
+  sorted_array
 end
 
 if __FILE__ == $PROGRAM_NAME
